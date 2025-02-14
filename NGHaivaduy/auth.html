@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập / Đăng ký</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="auth-container">
+        <div class="tabs">
+            <button id="login-tab" class="active" onclick="showLogin()">Đăng nhập</button>
+            <button id="register-tab" onclick="showRegister()">Đăng ký</button>
+        </div>
+
+        <!-- Form Đăng nhập -->
+        <div id="login-form" class="form">
+            <h2>🔑 Đăng nhập</h2>
+            <form>
+                <label for="username">Tên đăng nhập</label>
+                <input type="text" id="username" placeholder="Nhập tên đăng nhập" required>
+
+                <label for="password">Mật khẩu</label>
+                <input type="password" id="password" placeholder="Nhập mật khẩu" required>
+
+                <button type="submit">Đăng nhập</button>
+            </form>
+            <p id="error-msg" class="error-msg"></p>
+        </div>
+
+        <!-- Form Đăng ký -->
+        <div id="register-form" class="form hidden">
+            <h2>📝 Đăng ký</h2>
+            <form>
+                <label for="full-name">Họ và tên</label>
+                <input type="text" id="full-name" placeholder="Nhập họ và tên" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Nhập email" required>
+
+                <label for="new-username">Tên đăng nhập</label>
+                <input type="text" id="new-username" placeholder="Nhập tên đăng nhập" required>
+
+                <label for="new-password">Mật khẩu</label>
+                <input type="password" id="new-password" placeholder="Nhập mật khẩu" required>
+
+                <button type="submit">Đăng ký</button>
+            </form>
+            <p id="register-msg" class="success-msg"></p>
+        </div>
+    </div>
+</body>
+</html>
